@@ -1,0 +1,44 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  #{&}__img {
+    width: 100%;
+    flex-shrink: 1;
+  }
+}
+
+.banner__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.banner__button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Final_Fantasy_VII;
+
+  cursor: pointer;
+  width: 25%;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  border-left: solid 3px rgb(92, 92, 92);
+  outline: solid 3px rgb(83, 83, 83);
+
+  background-color: #eff1f4;
+  line-height: 2rem;
+  height: 4.5rem;
+
+  &:hover {
+    background-color: rgba(118, 137, 161, 0.5);
+  }
+}
+
+.banner__button__text {
+  height: 0;
+}

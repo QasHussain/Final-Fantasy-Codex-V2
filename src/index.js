@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "./fonts/Final_Fantasy_VII.ttf";
 
 ReactDOM.render(
   <React.StrictMode>

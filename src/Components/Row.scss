@@ -1,0 +1,140 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  #{&}__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    padding: 2rem;
+  }
+
+  #{&}__image {
+    object-fit: contain;
+    width: 100%;
+    max-height: 15rem;
+
+    transition: transform 500ms;
+    border: solid rgb(255, 255, 255) 3px;
+    background-color: #466ba3;
+  }
+}
+
+.row__image:hover {
+  transform: scale(1.05);
+}
+
+.row__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row_textBackground {
+  position: relative;
+  left: 0.19rem;
+  height: 2.2rem;
+  outline: solid 3px white;
+  background: #112761;
+  width: 100%;
+}
+
+.row__textName {
+  height: 0;
+  color: white;
+  position: relative;
+  bottom: 2.5rem;
+  font-size: 3rem;
+}
+
+.modalBackground {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  bottom: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-image: linear-gradient(to left, #0b254d, #244086);
+  box-shadow: 0px 0px 15px black;
+  border: solid 3px white;
+}
+
+.modalTitleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 1;
+  text-align: center;
+  height: 20%;
+
+  #{&}__name {
+    font-size: 7rem;
+    color: white;
+    font-weight: lighter;
+    height: 30%;
+    width: 30%;
+    padding: 1rem;
+    background-color: #112761;
+    border: solid 3px white;
+  }
+}
+
+.modalBtnContainer {
+  display: flex;
+  justify-content: right;
+  height: 30px;
+  position: absolute;
+  bottom: 98.8%;
+  right: 4%;
+
+  #{&}__btn {
+    object-fit: contain;
+    font-size: 4rem;
+    padding-top: 0.5rem;
+    padding-left: 0.3rem;
+    padding-bottom: 0.5rem;
+    height: 25px;
+    width: 30px;
+    color: white;
+    background-color: #112761;
+    border: solid 3px white;
+  }
+}
+
+.modalImageContainer {
+  display: flex;
+  justify-content: left;
+  object-fit: contain;
+  position: relative;
+  left: 10%;
+  top: 5%;
+
+  #{&}__image {
+    min-height: 17rem;
+    max-height: 20rem;
+  }
+}
+
+.modalStatsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  position: relative;
+  line-height: 0.8rem;
+  bottom: 40%;
+  height: 20%;
+}

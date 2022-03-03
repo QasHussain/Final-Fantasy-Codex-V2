@@ -1,7 +1,10 @@
 @import "colors";
 
 .App {
+  font-family: "Final_Fantasy_VII";
   background-size: cover;
   min-height: 100%;
   text-align: center;
+  color: black;
+  background-image: linear-gradient(to left, $darkGradient, $lightGradient);
 }
