@@ -37,6 +37,10 @@
   &:hover {
     background-color: rgba(118, 137, 161, 0.5);
   }
+
+  &:active {
+    background-color: white;
+  }
 }
 
 .banner__button__text {

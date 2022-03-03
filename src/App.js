@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./App.scss";
 import Banner from "./Components/Banner";
+import Footer from "./Components/Footer";
+import Homepage from "./Components/Homepage";
 import Row from "./Components/Row";
+import SearchBar from "./Components/SearchBar";
 import requests from "./store/requests";
 
 function App() {
   const [state, setState] = useState("");
   const [homePage, setHomePage] = useState("true");
+
+  const scrollRef = useRef();
 
   const ff6Active = () => {
     setState("ff6Active");
@@ -44,8 +49,12 @@ function App() {
     setHomePage("");
   };
 
+  const scrollUpToBanner = () => {
+    scrollRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="App">
+    <div className="App" ref={scrollRef}>
       <Banner
         setCharactersVI={ff6Active}
         setCharactersVII={ff7Active}
@@ -56,8 +65,19 @@ function App() {
         setCharactersXIII={ff13Active}
         setCharactersXV={ff15Active}
       />
+      <SearchBar fetchUrl={requests.fetchCharacterSearch} />
 
-      <Row fetchUrl={requests.fetch6Characters} />
+      {homePage === "true" && <Homepage />}
+
+      {state === "ff6Active" && <Row fetchUrl={requests.fetch6Characters} />}
+      {state === "ff7Active" && <Row fetchUrl={requests.fetch7Characters} />}
+      {state === "ff8Active" && <Row fetchUrl={requests.fetch8Characters} />}
+      {state === "ff9Active" && <Row fetchUrl={requests.fetch9Characters} />}
+      {state === "ff10Active" && <Row fetchUrl={requests.fetch10Characters} />}
+      {state === "ff12Active" && <Row fetchUrl={requests.fetch12Characters} />}
+      {state === "ff13Active" && <Row fetchUrl={requests.fetch13Characters} />}
+      {state === "ff15Active" && <Row fetchUrl={requests.fetch15Characters} />}
+      {homePage === "" && <Footer scrollUp={scrollUpToBanner} />}
     </div>
   );
 }

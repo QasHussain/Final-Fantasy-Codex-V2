@@ -1,0 +1,56 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 0;
+  min-width: 0;
+  flex: 0;
+  overflow: hidden;
+}
+
+.footer__show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  opacity: 100%;
+  bottom: 0px;
+  padding: 20px;
+  width: 100%;
+  height: 2%;
+  background-color: #112761;
+  border: solid 1px white;
+  z-index: 1;
+  transition-timing-function: linear;
+  transition: all 0.5s;
+}
+
+.moogle {
+  width: 50px;
+  object-fit: contain;
+  animation-duration: 0.4s;
+  animation-name: slide;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  @keyframes slide {
+    from {
+      margin-left: 0.3rem;
+    }
+
+    to {
+      margin-right: 0.3rem;
+    }
+  }
+}
+
+.textBox {
+  height: 1.5rem;
+  margin: 1rem;
+}
+.text {
+  color: white;
+  margin: 0.3rem;
+  font-size: 2.5rem;
+}

@@ -6,6 +6,7 @@ function Row({ fetchUrl }) {
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState([]);
   const [active, setActive] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     let isCancelled = false;
@@ -15,6 +16,7 @@ function Row({ fetchUrl }) {
         if (!isCancelled) {
           setCharacters(request.data);
         }
+        setLoading(true);
       } catch (e) {
         if (!isCancelled) {
           setCharacters(e.message);
@@ -52,14 +54,34 @@ function Row({ fetchUrl }) {
   };
 
   function truncate(input) {
-    if (input.length > 12) {
-      return input.substring(0, 12) + "...";
+    if (input.length > 15) {
+      return input.substring(0, 15) + "...";
     }
     return input;
   }
 
   return (
     <div className="row">
+      {loading ? (
+        ""
+      ) : (
+        <div className="spinnerContainer">
+          <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      )}
       <div className="row__images">
         {characters.map((character) => (
           <span>
@@ -105,7 +127,9 @@ function Row({ fetchUrl }) {
               <h2 className="modalStatsContainer__stat">
                 Height : {info.height}
               </h2>
-              <h2 className="modalStatsContainer__stat">Job : {info.job}</h2>
+              <h2 className="modalStatsContainer__stat">
+                {`Job : ${truncate(info.job)}`}
+              </h2>
               <h2 className="modalStatsContainer__stat">Race : {info.race}</h2>
               <h2 className="modalStatsContainer__stat">
                 Origin : {info.origin}
