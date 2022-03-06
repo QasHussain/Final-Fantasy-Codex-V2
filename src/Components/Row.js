@@ -7,6 +7,8 @@ function Row({ fetchUrl }) {
   const [info, setInfo] = useState([]);
   const [active, setActive] = useState("");
   const [loading, setLoading] = useState(false);
+  const [isLessthan767px, setIsLessthan767px] = useState();
+  const [isLessthan843px, setIsLessthan843px] = useState();
 
   useEffect(() => {
     let isCancelled = false;
@@ -30,6 +32,38 @@ function Row({ fetchUrl }) {
       isCancelled = true;
     };
   }, [fetchUrl]);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 767) {
+        setIsLessthan767px(true);
+      } else {
+        setIsLessthan767px(false);
+      }
+    }
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth < 843) {
+        setIsLessthan843px(true);
+      } else {
+        setIsLessthan843px(false);
+      }
+    }
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const getCharacterInfo = (character) => {
     setActive("true");
@@ -56,6 +90,13 @@ function Row({ fetchUrl }) {
   function truncate(input) {
     if (input.length > 15) {
       return input.substring(0, 15) + "...";
+    }
+    return input;
+  }
+
+  function truncateRace(input) {
+    if (input.length > 7) {
+      return input.substring(0, 7) + "...";
     }
     return input;
   }
@@ -130,9 +171,13 @@ function Row({ fetchUrl }) {
               <h2 className="modalStatsContainer__stat">
                 {`Job : ${truncate(info.job)}`}
               </h2>
-              <h2 className="modalStatsContainer__stat">Race : {info.race}</h2>
               <h2 className="modalStatsContainer__stat">
-                Origin : {info.origin}
+                {isLessthan843px
+                  ? `Race : ${truncateRace(info.race)}`
+                  : `Race : ${info.race}`}
+              </h2>
+              <h2 className="modalStatsContainer__stat">
+                {isLessthan767px ? `${info.origin}` : `Origin : ${info.origin}`}
               </h2>
             </section>
             <div className="modalDescriptionContainer">

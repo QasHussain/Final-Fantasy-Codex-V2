@@ -13,11 +13,12 @@ function App() {
 
   const scrollRef = useRef();
 
-  const ff6Active = () => {
+  const ff6Active = (e) => {
     setState("ff6Active");
     setHomePage("");
   };
-  const ff7Active = () => {
+
+  const ff7Active = (e) => {
     setState("ff7Active");
     setHomePage("");
   };
@@ -64,6 +65,7 @@ function App() {
         setCharactersXII={ff12Active}
         setCharactersXIII={ff13Active}
         setCharactersXV={ff15Active}
+        stateProp={state}
       />
       <SearchBar fetchUrl={requests.fetchCharacterSearch} />
 

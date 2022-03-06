@@ -73,7 +73,7 @@ function SearchBar({ fetchUrl }) {
       setFilteredData(newFilter);
     }
   };
-  console.log(characters);
+
   return (
     <div className="row">
       <div className="searchContainer">
