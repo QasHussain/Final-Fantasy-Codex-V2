@@ -1,6 +1,6 @@
 import React from "react";
 import "./Homepage.scss";
-import Moogle from "../Application Image Assets/Moogle.png";
+import Moogle from "../../assets/Moogle.png";
 
 function Homepage() {
   return (

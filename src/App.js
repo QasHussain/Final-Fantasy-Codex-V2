@@ -1,53 +1,23 @@
 import { useRef, useState } from "react";
 import "./App.scss";
-import Banner from "./Components/Banner";
-import Footer from "./Components/Footer";
-import Homepage from "./Components/Homepage";
-import Row from "./Components/Row";
-import SearchBar from "./Components/SearchBar";
+import Banner from "./components/Banner/Banner";
+import Footer from "./components/Footer/Footer";
+import Homepage from "./components/HomePage/Homepage";
+import CharacterGrid from "./components/CharacterDisplay/CharacterGrid";
+import SearchBar from "./components/SearchBar/SearchBar";
 import requests from "./store/requests";
+import { requestArray } from "./store/requests";
 
 function App() {
-  const [state, setState] = useState("");
+  const [selectedGame, setSelectedGame] = useState("");
   const [homePage, setHomePage] = useState("true");
 
   const scrollRef = useRef();
 
-  const ff6Active = (e) => {
-    setState("ff6Active");
+  const setGame = (gameObject) => {
+    setSelectedGame(gameObject);
     setHomePage("");
-  };
-
-  const ff7Active = (e) => {
-    setState("ff7Active");
-    setHomePage("");
-  };
-  const ff8Active = () => {
-    setState("ff8Active");
-    setHomePage("");
-  };
-  const ff9Active = () => {
-    setState("ff9Active");
-    setHomePage("");
-  };
-  const ff10Active = () => {
-    setState("ff10Active");
-    setHomePage("");
-  };
-
-  const ff12Active = () => {
-    setState("ff12Active");
-    setHomePage("");
-  };
-
-  const ff13Active = () => {
-    setState("ff13Active");
-    setHomePage("");
-  };
-
-  const ff15Active = () => {
-    setState("ff15Active");
-    setHomePage("");
+    console.log(gameObject);
   };
 
   const scrollUpToBanner = () => {
@@ -57,28 +27,19 @@ function App() {
   return (
     <div className="App" ref={scrollRef}>
       <Banner
-        setCharactersVI={ff6Active}
-        setCharactersVII={ff7Active}
-        setCharactersVIII={ff8Active}
-        setCharactersIX={ff9Active}
-        setCharactersX={ff10Active}
-        setCharactersXII={ff12Active}
-        setCharactersXIII={ff13Active}
-        setCharactersXV={ff15Active}
-        stateProp={state}
+        setGame={setGame}
+        stateProp={selectedGame}
+        requestArray={requestArray}
       />
+
       <SearchBar fetchUrl={requests.fetchCharacterSearch} />
 
       {homePage === "true" && <Homepage />}
 
-      {state === "ff6Active" && <Row fetchUrl={requests.fetch6Characters} />}
-      {state === "ff7Active" && <Row fetchUrl={requests.fetch7Characters} />}
-      {state === "ff8Active" && <Row fetchUrl={requests.fetch8Characters} />}
-      {state === "ff9Active" && <Row fetchUrl={requests.fetch9Characters} />}
-      {state === "ff10Active" && <Row fetchUrl={requests.fetch10Characters} />}
-      {state === "ff12Active" && <Row fetchUrl={requests.fetch12Characters} />}
-      {state === "ff13Active" && <Row fetchUrl={requests.fetch13Characters} />}
-      {state === "ff15Active" && <Row fetchUrl={requests.fetch15Characters} />}
+      {selectedGame && (
+        <CharacterGrid fetchUrl={requestArray[`${selectedGame}` - 1].request} />
+      )}
+
       {homePage === "" && <Footer scrollUp={scrollUpToBanner} />}
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Moogle2 from "../Application Image Assets/Moogle2.png";
+import Moogle2 from "../../assets/Moogle2.png";
 import "./Footer.scss";
 
 function Footer({ scrollUp }) {

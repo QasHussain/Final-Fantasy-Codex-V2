@@ -1,0 +1,124 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  #{&}__img {
+    width: 100%;
+    flex-shrink: 1;
+  }
+}
+
+.banner__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+  color: #050d24;
+}
+
+.banner__button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "FF_PSX";
+  cursor: pointer;
+  width: 25%;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  border-left: solid 3px rgb(92, 92, 92);
+  outline: solid 3px rgb(83, 83, 83);
+  background-color: #eff1f4;
+
+  &:hover {
+    background-color: rgba(118, 137, 161, 0.5);
+  }
+
+  &:active {
+    background-color: white;
+  }
+}
+.banner__button__text {
+  margin: 1rem;
+}
+
+.selectedButtonClass {
+  background-color: #112761;
+  color: white;
+}
+
+@media (max-width: 1439px) {
+.banner__button {
+  
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.banner__button__text {
+  margin: 0.16rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+  
+}
+
+@media (max-width: 1023px) {
+.banner__button {
+  font-size: 2.1rem;
+}
+
+.banner__button__text {
+  margin: 0rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+}
+
+
+@media (max-width: 767px) {
+.banner__button {
+  width: 50%;
+  font-size: 2.2rem;
+    outline: solid 1px rgb(83, 83, 83);
+}
+
+.banner__button__text {
+  margin: 0rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+}
+
+@media (max-width: 424px) {
+.banner__button {
+  width: 50%;
+  font-size: 2rem;
+   
+}
+
+}
+
+@media (max-width: 374px) {
+.banner__button {
+  width: 50%;
+  font-size: 1.6rem;
+}
+  .banner__button__text {
+
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+  }
+
+@media (max-width: 319px) {
+.banner__button {
+  width: 50%;
+  font-size: 1.4rem;
+}
+  .banner__button__text {
+
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+}

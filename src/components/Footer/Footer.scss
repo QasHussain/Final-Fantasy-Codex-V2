@@ -27,6 +27,8 @@
 }
 
 .moogle {
+  display: flex;
+  justify-content: center;
   width: 50px;
   object-fit: contain;
   animation-duration: 0.4s;
@@ -46,7 +48,9 @@
 }
 
 .textBox {
-  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
 }
 .text {
@@ -54,3 +58,54 @@
   margin: 0.3rem;
   font-size: 2.5rem;
 }
+
+@media (max-width: 1439px) {
+  .text {
+  color: white;
+  padding-right: 3rem;
+  margin: 0rem;
+  font-size: 2.5rem;
+}
+}
+
+
+@media (max-width: 767px) {
+  .text {
+  color: white;
+  padding-right: 3rem;
+  margin: 0rem;
+  font-size: 2rem;
+}
+
+}
+
+@media (max-width: 424px) {
+  .text {
+  color: white;
+  padding-right: 4rem;
+  margin: 0rem;
+  font-size: 1.7rem;
+}
+
+}
+
+@media (max-width: 374px) {
+  .text {
+  color: white;
+  padding-right: 4rem;
+  margin: 0rem;
+  font-size: 1.6rem;
+}
+
+}
+
+@media (max-width: 319px) {
+  .text {
+  color: white;
+  padding-right: 4rem;
+  margin: 0rem;
+  font-size: 1.5rem;
+}
+
+}
+
