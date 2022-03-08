@@ -28,7 +28,6 @@ function CharacterCard(props) {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "0% 50px",
         objectFit: "contain",
-        height: "50%",
       }}
     >
       {props.children}
