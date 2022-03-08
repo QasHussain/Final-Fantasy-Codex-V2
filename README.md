@@ -1,10 +1,10 @@
-# Final Fantasy Codex
+# Final Fantasy Codex - https://final-fantasy-codex-v2.web.app/
 
 ### By Qasim Hussain
 
 ## Description
 
-Final Fantasy Codex is an online, fully responsive interactive encyclopedia of every character in the mainline Final Fantasy video game series entries 6-15. Built in React and utlizing the [Moogle API](https://www.moogleapi.com/), this front-end application allows you to browse through every character in the series from VI to XV, learning their backstory, age, first appearence and much more. The user can also use the search feature to browse for specific characters by name.
+Final Fantasy Codex is an online, fully responsive interactive encyclopedia of every character in the mainline Final Fantasy video game series entries 6-15. Built in React and utlizing the [Moogle API](https://www.moogleapi.com/), this front-end application allows you to browse through every character in the series from VI to XV, learning their backstory, age, first appearence and much more. The user can also use the search feature to browse for specific characters by name. Using the API data, this application displays multiple end points with a functional, user friendly interface.
 
 This project was degined and built for my front-end development portfolio. As a long time fan of the Final Fantasy series, I wanted to create something truly unique and personal to me for my first portfolio piece.
 
@@ -63,4 +63,14 @@ The next step was to start coding and building the application. Due to the singl
 
 ## Final Application Preview:
 
-TBC
+Homepage with multiple game select options and character gallery with pop up modal :
+
+https://user-images.githubusercontent.com/98174866/157308727-032ab4ff-18de-4a7e-bf16-5864b6d15937.mp4
+
+Functional and responsive search bar usable in conjunction with game select:
+
+https://user-images.githubusercontent.com/98174866/157309129-4820c1bf-8f1c-4398-a7e0-e11064b8c1d9.mp4
+
+Fully responsive with desktop to mobile support:
+
+https://user-images.githubusercontent.com/98174866/157309323-27a6fc94-b1d0-4fb1-9113-94bffd9d27f1.mp4
