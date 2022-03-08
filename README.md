@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Final Fantasy Codex
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### By Qasim Hussain
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+Final Fantasy Codex is an online, fully responsive interactive encyclopedia of every character in the mainline Final Fantasy video game series entries 6-15. Built in React and utlizing the [Moogle API](https://www.moogleapi.com/), this front-end application allows you to browse through every character in the series from VI to XV, learning their backstory, age, first appearence and much more. The user can also use the search feature to browse for specific characters by name.
 
-### `npm start`
+This project was degined and built for my front-end development portfolio. As a long time fan of the Final Fantasy series, I wanted to create something truly unique and personal to me for my first portfolio piece.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Planning and Preperation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The inial preparation for this applicaion involved creating a flowchart and moodboard in Figma. This gave me a good idea of the funcionality I would need as well some visual reference for the overall look of the application.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+![Final Fantasy Codex Flowchart   Moodboard V2](https://user-images.githubusercontent.com/98174866/157287855-a51f4114-ad73-4aa4-a12e-298f2dfe6d35.jpg)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The next step was to create a series of transparent PNG assets that I could use in my applicaion. aI wanted to randomly generate various Final Fnatasy characters as a background for the application on every refresh. Coming from an illustration and artwork background, I was able to paint out the backgrounds on various official character posters and convert them to transparent PNGs. This gave me an asset sheet that would be perfect for my application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+![FF Transparent Asset Sheet](https://user-images.githubusercontent.com/98174866/154470482-272b81c5-129d-4452-b6cc-dba03e21126e.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I also desiogned and created a banner for the application:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Banner image](https://user-images.githubusercontent.com/98174866/157288164-8adad508-ba7f-4f35-9961-1936effeb1e8.jpg)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I then went into Figma and created a series of mock designs so I could figure out the visual design, flow and fuctionality of the applicaion before I began the build. I created a mock up of the homepage, character display page and the modal page. I did the same for mobile as I knew I wanted this application to be fully responsive. This process gave me  clarity on the design and style of the application before I even wrote a line of code.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Desktop Mock Homepage**
 
-### Analyzing the Bundle Size
+![HomePage](https://user-images.githubusercontent.com/98174866/157289018-fa011dfa-fd98-47c1-a124-dbe9d876755c.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+**Desktop Mock Homepage Character Display**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Character Page](https://user-images.githubusercontent.com/98174866/157289055-a21be0b8-3a41-4c86-9fb0-8ce02813fb14.jpg)
 
-### Advanced Configuration
+**Desktop Mock Modal Window**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![Desktop Modal Page](https://user-images.githubusercontent.com/98174866/157289167-8e23bda1-ed1b-45e3-8eda-2033d8ad8a2a.jpg)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**iPhone 13 Mock HomePage, Character & Modal Window**
 
-### `npm run build` fails to minify
+![13 Pro - 3 - HOMEPAGE](https://user-images.githubusercontent.com/98174866/157289368-1692b9e6-137f-4a61-a133-55586bcb3739.jpg)![13 Pro - 1 - CHARACTER PAGE](https://user-images.githubusercontent.com/98174866/157289381-e9ad54a7-27d8-4d67-841d-749e63c55d23.jpg)![13 Pro - 2 - MODAL PAGE](https://user-images.githubusercontent.com/98174866/157289398-583098fe-e7dc-4b3d-956e-ef2c45d4b1f9.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+The next step was to start coding and building the application. Due to the single page and reactive nature of the application I wanted to build, I knew the React library would be ideal for this project.
+
+## Technologies Used:
+
+*React
+*Javascript
+*scss
+
+## Final Application Preview:
+
+TBC
