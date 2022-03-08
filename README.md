@@ -34,21 +34,21 @@ I then went into Figma and created a series of mock designs so I could figure ou
 
 
 
-**Desktop Mock Homepage**
+**Figma Desktop Mock Homepage**
 
 ![HomePage](https://user-images.githubusercontent.com/98174866/157289018-fa011dfa-fd98-47c1-a124-dbe9d876755c.jpg)
 
 
-**Desktop Mock Homepage Character Display**
+**Figma Desktop Mock Homepage Character Display**
 
 ![Character Page](https://user-images.githubusercontent.com/98174866/157289055-a21be0b8-3a41-4c86-9fb0-8ce02813fb14.jpg)
 
-**Desktop Mock Modal Window**
+**Figma Desktop Mock Modal Window**
 
 ![Desktop Modal Page](https://user-images.githubusercontent.com/98174866/157289167-8e23bda1-ed1b-45e3-8eda-2033d8ad8a2a.jpg)
 
 
-**iPhone 13 Mock HomePage, Character & Modal Window**
+**Figma iPhone 13 Mock HomePage, Character & Modal Window**
 
 ![13 Pro - 3 - HOMEPAGE](https://user-images.githubusercontent.com/98174866/157290213-6bfaef1d-2ef9-464f-8cf0-19023154d9de.jpg)![13 Pro - 1 - CHARACTER PAGE](https://user-images.githubusercontent.com/98174866/157290226-05ab657e-d0f6-4544-93df-90412ec5f0fb.jpg)![13 Pro - 2 - MODAL PAGE](https://user-images.githubusercontent.com/98174866/157290237-3217e607-5aee-4e0f-af96-bc62a6b9d4b7.jpg)
 
