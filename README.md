@@ -1,4 +1,4 @@
-# Final Fantasy Codex - https://final-fantasy-codex-v2.web.app/
+# [Final Fantasy Codex](https://final-fantasy-codex-v2.web.app/)
 
 ### By Qasim Hussain
 
