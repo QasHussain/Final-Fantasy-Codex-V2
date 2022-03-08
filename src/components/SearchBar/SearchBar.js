@@ -3,7 +3,7 @@ import axios from "../../store/axios";
 import "../CharacterDisplay/CharacterGrid.scss";
 import "./SearchBar.scss";
 import SearchIcon from "@mui/icons-material/Search";
-import Modal from "../CharacterDisplay/Modal.scss";
+import Modal from "../CharacterDisplay/Modal";
 import FilteredSearchResults from "./FilteredSearchResults";
 
 function SearchBar({ fetchUrl }) {

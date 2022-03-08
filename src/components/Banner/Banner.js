@@ -12,6 +12,7 @@ function Banner({ setGame, stateProp }) {
       <div className="banner__buttons">
         {requestArray.map((game) => (
           <button
+            key={game.id}
             onClick={() => setGame(game.id)}
             className={`${
               stateProp === game.id ? "selectedButtonClass" : ""

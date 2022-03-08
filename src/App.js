@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import "./App.scss";
 import Banner from "./components/Banner/Banner";
 import Footer from "./components/Footer/Footer";
@@ -7,6 +7,7 @@ import CharacterGrid from "./components/CharacterDisplay/CharacterGrid";
 import SearchBar from "./components/SearchBar/SearchBar";
 import requests from "./store/requests";
 import { requestArray } from "./store/requests";
+import CharacterCard from "./components/CharacterCard/CharacterCard";
 
 function App() {
   const [selectedGame, setSelectedGame] = useState("");
@@ -32,14 +33,17 @@ function App() {
         requestArray={requestArray}
       />
 
-      <SearchBar fetchUrl={requests.fetchCharacterSearch} />
+      <CharacterCard>
+        <SearchBar fetchUrl={requests.fetchCharacterSearch} />
 
-      {homePage === "true" && <Homepage />}
+        {homePage === "true" && <Homepage />}
 
-      {selectedGame && (
-        <CharacterGrid fetchUrl={requestArray[`${selectedGame}` - 1].request} />
-      )}
-
+        {selectedGame && (
+          <CharacterGrid
+            fetchUrl={requestArray[`${selectedGame}` - 1].request}
+          />
+        )}
+      </CharacterCard>
       {homePage === "" && <Footer scrollUp={scrollUpToBanner} />}
     </div>
   );
