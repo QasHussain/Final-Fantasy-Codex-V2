@@ -20,7 +20,8 @@ The inial preparation for this applicaion involved creating a flowchart and mood
 The next step was to create a series of transparent PNG assets that I could use in my applicaion. aI wanted to randomly generate various Final Fnatasy characters as a background for the application on every refresh. Coming from an illustration and artwork background, I was able to paint out the backgrounds on various official character posters and convert them to transparent PNGs. This gave me an asset sheet that would be perfect for my application.
 
 
-![FF Transparent Asset Sheet](https://user-images.githubusercontent.com/98174866/154470482-272b81c5-129d-4452-b6cc-dba03e21126e.png)
+![FF Transparent Asset Sheet](https://user-images.githubusercontent.com/98174866/157290174-1bdef332-450d-48b1-9369-2db8ab498fe0.png)
+
 
 
 I also desiogned and created a banner for the application:
@@ -49,7 +50,7 @@ I then went into Figma and created a series of mock designs so I could figure ou
 
 **iPhone 13 Mock HomePage, Character & Modal Window**
 
-![13 Pro - 3 - HOMEPAGE](https://user-images.githubusercontent.com/98174866/157289368-1692b9e6-137f-4a61-a133-55586bcb3739.jpg)![13 Pro - 1 - CHARACTER PAGE](https://user-images.githubusercontent.com/98174866/157289381-e9ad54a7-27d8-4d67-841d-749e63c55d23.jpg)![13 Pro - 2 - MODAL PAGE](https://user-images.githubusercontent.com/98174866/157289398-583098fe-e7dc-4b3d-956e-ef2c45d4b1f9.jpg)
+![13 Pro - 3 - HOMEPAGE](https://user-images.githubusercontent.com/98174866/157290213-6bfaef1d-2ef9-464f-8cf0-19023154d9de.jpg)![13 Pro - 1 - CHARACTER PAGE](https://user-images.githubusercontent.com/98174866/157290226-05ab657e-d0f6-4544-93df-90412ec5f0fb.jpg)![13 Pro - 2 - MODAL PAGE](https://user-images.githubusercontent.com/98174866/157290237-3217e607-5aee-4e0f-af96-bc62a6b9d4b7.jpg)
 
 
 The next step was to start coding and building the application. Due to the single page and reactive nature of the application I wanted to build, I knew the React library would be ideal for this project.
