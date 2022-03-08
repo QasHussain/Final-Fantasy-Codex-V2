@@ -18,7 +18,6 @@ function App() {
   const setGame = (gameObject) => {
     setSelectedGame(gameObject);
     setHomePage("");
-    console.log(gameObject);
   };
 
   const scrollUpToBanner = () => {

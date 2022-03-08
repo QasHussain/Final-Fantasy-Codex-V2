@@ -16,7 +16,7 @@ function Homepage() {
         </div>
       </div>
       <div className="moogleContainer">
-        <img className="moogleContainer__moogle" src={Moogle} />
+        <img className="moogleContainer__moogle" alt="Moogle" src={Moogle} />
       </div>
     </div>
   );

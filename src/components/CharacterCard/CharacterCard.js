@@ -20,8 +20,6 @@ function CharacterCard(props) {
     rdnmImage();
   }, []);
 
-  console.log(image);
-
   return (
     <div
       className="background__image"
