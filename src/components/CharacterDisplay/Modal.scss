@@ -238,13 +238,13 @@
   .modalTitleContainer {
     #{&}__name {
       margin: 1rem;
-      padding: 0.5rem;
+      padding-top: 0rem;
     }
   }
 
   .modalBtnContainer {
     #{&}__btn {
-      padding: 0.1rem;
+      line-height: 1.3rem;
     }
   }
 }
