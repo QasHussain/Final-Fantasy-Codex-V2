@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  cursor: pointer;
 
   #{&}__img {
     width: 100%;
@@ -49,76 +50,69 @@
 }
 
 @media (max-width: 1439px) {
-.banner__button {
-  
-  font-size: 3rem;
-  letter-spacing: 2px;
-}
+  .banner__button {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
 
-.banner__button__text {
-  margin: 0.16rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-  
+  .banner__button__text {
+    margin: 0.16rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
 }
 
 @media (max-width: 1023px) {
-.banner__button {
-  font-size: 2.1rem;
-}
+  .banner__button {
+    font-size: 2.1rem;
+  }
 
-.banner__button__text {
-  margin: 0rem;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
+  .banner__button__text {
+    margin: 0rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
 }
-}
-
 
 @media (max-width: 767px) {
-.banner__button {
-  width: 50%;
-  font-size: 2.2rem;
+  .banner__button {
+    width: 50%;
+    font-size: 2.2rem;
     outline: solid 1px rgb(83, 83, 83);
-}
+  }
 
-.banner__button__text {
-  margin: 0rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
+  .banner__button__text {
+    margin: 0rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 @media (max-width: 424px) {
-.banner__button {
-  width: 50%;
-  font-size: 2rem;
-   
-}
-
+  .banner__button {
+    width: 50%;
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 374px) {
-.banner__button {
-  width: 50%;
-  font-size: 1.6rem;
-}
-  .banner__button__text {
-
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
+  .banner__button {
+    width: 50%;
+    font-size: 1.6rem;
   }
+  .banner__button__text {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
 
 @media (max-width: 319px) {
-.banner__button {
-  width: 50%;
-  font-size: 1.4rem;
-}
+  .banner__button {
+    width: 50%;
+    font-size: 1.4rem;
+  }
   .banner__button__text {
-
-  padding-top: 0rem;
-  padding-bottom: 0rem;
-}
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
 }

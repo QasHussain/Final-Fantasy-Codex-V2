@@ -3,11 +3,16 @@ import "./Banner.scss";
 import BannerImage from "../../assets/BannerImage.jpg";
 import { requestArray } from "../../store/requests";
 
-function Banner({ setGame, stateProp }) {
+function Banner({ setGame, stateProp, goHome }) {
   return (
     <div>
       <header className="banner">
-        <img className="banner__img" src={BannerImage} alt="banner" />
+        <img
+          onClick={goHome}
+          className="banner__img"
+          src={BannerImage}
+          alt="banner"
+        />
       </header>
       <div className="banner__buttons">
         {requestArray.map((game) => (

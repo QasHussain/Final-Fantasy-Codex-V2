@@ -4,6 +4,7 @@ import axios from "../../store/axios";
 import "./CharacterGrid.scss";
 import Modal from "./Modal";
 import CharacterGallery from "./CharacterGallery";
+import { RemoveScroll } from "react-remove-scroll";
 
 function CharacterGrid({ fetchUrl }) {
   const [characters, setCharacters] = useState([]);
@@ -59,7 +60,12 @@ function CharacterGrid({ fetchUrl }) {
         characterProp={characters}
         getCharacterInfo={getCharacterInfo}
       />
-      {modalActive === "true" && <Modal infoProp={info} close={closeBtn} />}
+
+      {modalActive === "true" && (
+        <RemoveScroll>
+          <Modal infoProp={info} close={closeBtn} />
+        </RemoveScroll>
+      )}
     </div>
   );
 }

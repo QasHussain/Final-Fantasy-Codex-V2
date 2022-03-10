@@ -20,6 +20,11 @@ function App() {
     setHomePage("");
   };
 
+  const goToHomePage = () => {
+    setHomePage("true");
+    setSelectedGame("");
+  };
+
   const scrollUpToBanner = () => {
     scrollRef.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -30,6 +35,7 @@ function App() {
         setGame={setGame}
         stateProp={selectedGame}
         requestArray={requestArray}
+        goHome={goToHomePage}
       />
 
       <CharacterCard>

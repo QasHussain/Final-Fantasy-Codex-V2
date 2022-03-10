@@ -1,5 +1,6 @@
 import React from "react";
 import truncateMethod from "../../assets/truncateMethod";
+
 import "./Modal.scss";
 
 function Modal({ close, infoProp }) {

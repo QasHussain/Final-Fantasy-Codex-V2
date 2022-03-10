@@ -5,6 +5,7 @@ import "./SearchBar.scss";
 import SearchIcon from "@mui/icons-material/Search";
 import Modal from "../CharacterDisplay/Modal";
 import FilteredSearchResults from "./FilteredSearchResults";
+import { RemoveScroll } from "react-remove-scroll";
 
 function SearchBar({ fetchUrl }) {
   const [characters, setCharacters] = useState([]);
@@ -28,7 +29,7 @@ function SearchBar({ fetchUrl }) {
 
   useEffect(() => {
     fetchData();
-  }, [fetchUrl]);
+  }, []);
 
   const getCharacterInfo = (character) => {
     setModalActive("true");
@@ -86,7 +87,11 @@ function SearchBar({ fetchUrl }) {
           />
         )}
 
-        {modalActive === "true" && <Modal infoProp={info} close={closeBtn} />}
+        {modalActive === "true" && (
+          <RemoveScroll>
+            <Modal infoProp={info} close={closeBtn} />
+          </RemoveScroll>
+        )}
       </div>
     </div>
   );
