@@ -59,12 +59,12 @@ The next step was to start coding and building the application. Due to the singl
 
 ## Technologies Used:
 
-*React
-*Javascript
-*Figma
-*Css
-*Node.js
-*Scss
+* React
+* Javascript
+* Figma
+* Css
+* Node.js
+* Scss
 
 ## Final Application Preview:
 
